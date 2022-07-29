@@ -1,24 +1,29 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import css from './Statistics.module.css';
-import { Feedback } from 'components/Feedback/Feedback';
 
-export class Statistics extends React.Component {
-  state = {
-    good: 0,
-    neutral: 0,
-    bad: 0,
-  };
+export const Statistics = ({
+  good,
+  neutral,
+  bad,
+  total,
+  positivePercentage,
+}) => (
+  <div>
+    <ul className={css.list}>
+      <li className={css.item}>Good: {good}</li>
+      <li className={css.item}>Neutral: {neutral}</li>
+      <li className={css.item}>Bad: {bad}</li>
+      <li className={css.item}>Total: {total}</li>
+      <li className={css.item}>Positive feedback: {positivePercentage}%</li>
+    </ul>
+  </div>
+);
 
-  render() {
-    return (
-      <div className={css.container}>
-        <h2 className={css.title}>Statistics</h2>
-        <div className={css.wrapper}>
-          <span className={css.item}>Good: {this.state.good}</span>
-          <span className={css.item}>Neutral: {this.state.neutral}</span>
-          <span className={css.item}>Bad:{this.state.bad}</span>
-        </div>
-      </div>
-    );
-  }
-}
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
