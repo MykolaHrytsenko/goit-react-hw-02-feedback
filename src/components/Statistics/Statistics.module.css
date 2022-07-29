@@ -1,0 +1,18 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+
+  width: 400px;
+}
+
+.title {
+  text-align: center;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+
+  padding-left: 40%;
+}
