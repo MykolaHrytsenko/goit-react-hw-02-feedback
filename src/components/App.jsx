@@ -4,8 +4,7 @@ import { Statistics } from './Statistics/Statistics';
 export const App = () => {
   return (
     <>
-      <Feedback />;
-      <Statistics />;
+      <Feedback />;<Statistics />;
     </>
   );
 };
