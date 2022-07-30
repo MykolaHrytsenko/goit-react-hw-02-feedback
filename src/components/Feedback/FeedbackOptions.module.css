@@ -1,28 +1,13 @@
-.feedbackList {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 15px;
-
-  width: 400px;
-}
-
-.title {
-  text-align: center;
-}
-
-.btnWrapper {
+.list {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 
-  padding-left: 20%;
-  padding-right: 20%;
+  list-style: none;
 }
 
 .btn {
-  margin-left: auto;
-  margin-right: auto;
-
+  margin-right: 5px;
   width: 70px;
   cursor: pointer;
 }

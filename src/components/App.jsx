@@ -12,11 +12,11 @@ export class App extends Component {
   };
 
   leaveFeedback = e => {
-    const targetBtn = e.target.textContent.toLowerCase();
+    const btnValue = e.target.textContent.toLowerCase();
 
     this.setState(prevState => ({
       ...prevState,
-      [targetBtn]: prevState[targetBtn] + 1,
+      [btnValue]: prevState[btnValue] + 1,
     }));
   };
 
@@ -32,7 +32,7 @@ export class App extends Component {
     const { good, neutral, bad } = this.state;
 
     return (
-      <div className="container">
+      <>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={Object.keys(this.state)}
@@ -52,7 +52,7 @@ export class App extends Component {
             />
           )}
         </Section>
-      </div>
+      </>
     );
   }
 }
