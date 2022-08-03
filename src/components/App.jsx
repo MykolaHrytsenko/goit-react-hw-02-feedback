@@ -11,12 +11,9 @@ export class App extends Component {
     bad: 0,
   };
 
-  leaveFeedback = e => {
-    const btnValue = e.target.textContent.toLowerCase();
-
+  leaveFeedback = key => {
     this.setState(prevState => ({
-      ...prevState,
-      [btnValue]: prevState[btnValue] + 1,
+      [key]: prevState[key] + 1,
     }));
   };
 
@@ -35,7 +32,7 @@ export class App extends Component {
       <>
         <Section title="Please leave feedback">
           <FeedbackOptions
-            options={Object.keys(this.state)}
+            options={this.state}
             onLeaveFeedback={this.leaveFeedback}
           />
         </Section>
